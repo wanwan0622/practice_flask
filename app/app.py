@@ -12,7 +12,8 @@ def hello():
 @app.route("/index")
 def index():
     name = request.args.get("name")
-    return render_template("index.html", name=name)
+    kawaii = ["ねこ", "ぴんく", "すいーつ", "きもの"]
+    return render_template("index.html", name=name, kawaii=kawaii)
 
 # おまじない
 if __name__ == "__main__":

@@ -12,5 +12,8 @@
         <h2>竹です</h2>
         {% endif %} <!-- endifが必要らしい -->
         <img src="/static/images/icon.jpg" alt="ばんぶー">
+        {% for word in kawaii %}
+        <p>{{word}}</p>
+        {% endfor %}
     </body>
 </html>
