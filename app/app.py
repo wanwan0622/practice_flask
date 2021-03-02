@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # Flaskオブジェクトの作成
 app = Flask(__name__)
@@ -11,7 +11,8 @@ def hello():
 # 「/index」へアクセスがあった場合に、index.htmlを返す
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    name = request.args.get("name")
+    return render_template("index.html", name=name)
 
 # おまじない
 if __name__ == "__main__":
