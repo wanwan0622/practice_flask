@@ -4,7 +4,13 @@
     </head>
     <body>
         <h1>こんにちは世界</h1>
-        <h2>ばんぶーちゃんだよ</h2>
+        {% if name == 'bamboo' %}
+        <h2>{{name}}ちゃんだよ</h2>
+        {% elif name %}
+        <h2>{{name}}です</h2>
+        {% else %}
+        <h2>竹です</h2>
+        {% endif %} <!-- endifが必要らしい -->
         <img src="/static/images/icon.jpg" alt="ばんぶー">
     </body>
 </html>
